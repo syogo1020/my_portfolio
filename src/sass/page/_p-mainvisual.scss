@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.p-mainvisual {
+    background-image: url(/images/common/hokkaidou.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+  }

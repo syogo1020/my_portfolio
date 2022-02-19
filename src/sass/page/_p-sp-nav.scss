@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-sp-nav__item {
+  font-size: 1.125rem;
+  font-weight: $bold;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.p-sp-nav__item a {
+  display: block;
+  color: $white;
+  padding: 1rem;
+}

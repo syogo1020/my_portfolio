@@ -1,0 +1,65 @@
+@use "global" as *;
+
+
+.c-hamburger {
+    display: inline-block;
+    cursor: pointer;
+    @include mq("md") {
+      display: none;
+    }
+    &::after {
+      content: "MENU";
+      display: block;
+      color: $white;
+      font-family: $base-font-family;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      margin-top: 0.25rem;
+      transition: content 0.3s;
+    }
+    &.is-open::after {
+      content: "CLOSE";
+    }
+  }
+  
+  .c-hamburger__bars {
+    display: block;
+    width: 15px;
+    height: 8px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .c-hamburger__bar {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+  }
+  
+  .c-hamburger__bar1 {
+    top: 0;
+    transition: top 0.3s, transform 0.3s;
+  
+    &.is-open {
+      top: 0.4rem;
+      transform: rotate(45deg);
+    }
+  }
+  .c-hamburger__bar2 {
+    top: 0.4rem;
+    transition: opacity 0.3s;
+    &.is-open {
+      opacity: 0;
+    }
+  }
+  .c-hamburger__bar3 {
+    top: 0.8rem;
+    transition: top 0.3s, transform 0.3s;
+    &.is-open {
+      top: 0.4rem;
+      transform: rotate(-45deg);
+    }
+  }
