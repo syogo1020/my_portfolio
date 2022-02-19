@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .p-gnav {
   display: none;
   @include mq("md") {
