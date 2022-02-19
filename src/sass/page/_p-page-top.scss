@@ -1,0 +1,89 @@
+@use "global" as *;
+
+
+/*リンクの形状*/
+// #p-page-top a {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background: $skyblue;
+//   border-radius: 0.5rem;
+//   width: 6rem;
+//   height: 6rem;
+//   color: $black;
+//   text-align: center;
+//   text-transform: uppercase;
+//   text-decoration: none;
+//   font-size: 0.6rem;
+//   transition: all 0.3s;
+// }
+#p-page-top {
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $skyblue;
+    border-radius: 0.5rem;
+    width: 6rem;
+    height: 6rem;
+    color: $black;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+  }
+  a:hover {
+    background: $page-top-color;
+  }
+}
+
+
+// #p-page-top a:hover {
+ // background: $page-top-color;
+// }
+
+/*リンクを右下に固定*/
+#p-page-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 211111;
+  z-index: $layer-up;
+  /*はじめは非表示*/
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+/*左の動き*/
+
+#p-page-top.LeftMove {
+  animation: LeftAnime 0.5s forwards;
+}
+
+@keyframes LeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*右の動き*/
+
+#p-page-top.RightMove {
+  animation: RightAnime 0.5s forwards;
+}
+@keyframes RightAnime {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}

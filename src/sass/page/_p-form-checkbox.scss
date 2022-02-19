@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.p-form-checkbox + span {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.2em 0;
+  padding: 0 0 0 3rem;
+  position: relative;
+  font-size: 1.2rem;
+  @include mq("md") {
+    font-size: 1.6rem;
+  }
+}
+
+.p-form-checkbox + span::before {
+  background: $white;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0.2rem;
+  content: "";
+  display: block;
+  height: 2rem;
+  height: 2rem;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  width: 2rem;
+  @include mq("md") {
+  }
+}
+
+.p-form-checkbox + span::after {
+  border-bottom: 0.3rem solid $black;
+  border-left: 0.3rem solid $black;
+  content: "";
+  display: block;
+  height: 1rem;
+  left: 0;
+  margin-top: -0.2rem;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: all 0.3s ease 0s;
+  width: 2rem;
+  @include mq("md") {
+  }
+}
+
+.p-form-checkbox:checked + span::after {
+  opacity: 1;
+}

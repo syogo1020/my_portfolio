@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-form-input {
+  width: 100%;
+  border: 1px solid $form-color;
+  padding: 0.4rem 1.6rem;
+  background-color: $white;
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.8rem;
+  height: 3.8rem;
+  @include mq("md") {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+}

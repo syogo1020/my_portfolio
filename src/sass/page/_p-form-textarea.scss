@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.p-form-textarea {
+  width: 100%;
+  padding: 1.7rem 0.8rem;
+  height: 21.7rem;
+  border: 1px solid $black;
+  background-color: $white;
+  font-size: 1.8rem;
+  @include mq("md") {
+    padding: 2.2rem 0.8rem;
+    height: 40rem;
+  }
+}

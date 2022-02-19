@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-contact-submit {
+  margin-top: 0.5rem;
+  text-align: center;
+  @include mq("md") {
+    margin-top: 1rem;
+  }
+}

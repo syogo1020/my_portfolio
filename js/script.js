@@ -181,15 +181,15 @@ function PageTopAnime() {
 
   if (scroll >= 600) {
     //上から400pxスクロールしたら
-    $('#page-top').removeClass('RightMove'); //#page-topについているRightMoveというクラス名を除く
+    $('#p-page-top').removeClass('RightMove'); //#p-page-topについているRightMoveというクラス名を除く
 
-    $('#page-top').addClass('LeftMove'); //#page-topについているLeftMoveというクラス名を付与
+    $('#p-page-top').addClass('LeftMove'); //#p-page-topについているLeftMoveというクラス名を付与
   } else {
-    if ($('#page-top').hasClass('LeftMove')) {
-      //すでに#page-topにLeftMoveというクラス名がついていたら
-      $('#page-top').removeClass('LeftMove'); //LeftMoveというクラス名を除き
+    if ($('#p-page-top').hasClass('LeftMove')) {
+      //すでに#p-page-topにLeftMoveというクラス名がついていたら
+      $('#p-page-top').removeClass('LeftMove'); //LeftMoveというクラス名を除き
 
-      $('#page-top').addClass('RightMove'); //RightMoveというクラス名を#page-topに付与
+      $('#p-page-top').addClass('RightMove'); //RightMoveというクラス名を#p-page-topに付与
     }
   }
 } // 画面をスクロールをしたら動かしたい場合の記述
@@ -198,9 +198,9 @@ function PageTopAnime() {
 $(window).scroll(function () {
   PageTopAnime();
   /* スクロールした際の動きの関数を呼ぶ*/
-}); // #page-topをクリックした際の設定
+}); // #p-page-topをクリックした際の設定
 
-$('#page-top').click(function () {
+$('#p-page-top').click(function () {
   $('body,html').animate({
     scrollTop: 0 //ページトップまでスクロール
 
