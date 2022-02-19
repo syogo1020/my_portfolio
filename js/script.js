@@ -219,3 +219,5 @@ $("#MenuButton").click(function () {
   $(".drawer-menu").toggleClass("open");
   $("html").toggleClass("is-fixed");
 });
+
+new WOW().init();
