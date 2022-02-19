@@ -1,0 +1,129 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1000px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+// ※PC時：デザインカンプの余白の幅ではない。PC時は通常25px
+
+
+////////////////////
+// フォント設定
+////////////////////
+
+// ※検証ツールでしっかり反映されているか確認する
+/* FontFamily */
+$base-font-family: "ヒラギノ明朝 ProN", "YakuHanJPs, 'Hiragino Kaku Gothic Pro', MyYuGothicM, Meiryo, sans-serif;";
+$second-font-family: "";
+
+body {
+  font-family: $base-font-family;
+}
+
+// フォントウェイト
+$regular: 300;
+$normal: 400;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定）
+//汎用色
+$black: #000;
+$white: #fff;
+$skyblue: #b1e0e6;
+$bg-color: #f2f4f6;
+$drawer-color: #888;
+$contact-color: #efefef;
+$form-color: #707070;
+$page-top-color: #777;
+$footer-color: #3e3e3e;
+
+
+// 透過度
+$opacity: 0.6;
+$hover-opacity: 0.8;
+
+
+body {
+    background-color: $bg-color;
+}
+
+
+
+
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+//rem(~~)形式の場合こちらを使用する。gulpfile.jsのpx同時出力機能を削除した為こちらは基本使用しない
+//参考サイト: https://ja.stackoverflow.com/questions/31539/cssnext-%E3%81%8B%E3%82%89-rem-%E3%81%AB%E8%87%AA%E5%8B%95%E3%81%A7-px-%E3%82%92%E5%8A%A0%E3%81%88%E3%82%8B%E6%A9%9F%E8%83%BD%E3%82%92%E3%81%AA%E3%81%8F%E3%81%97%E3%81%9F%E3%81%84
+@function rem($pixels) {
+  @return math.div($pixels, 10) * 1rem;
+}
+
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//768px以上を表示
+.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+
+
+//z-index関連
+$layer-background: -1;
+$layer-default: 1;
+$layer-up: 2;
+$layer-footer: 10;
+$layer-header: 20;
+$layer-floating: 30;
+$layer-drawer: 40;
+$layer-modal: 100;

@@ -1,0 +1,24 @@
+.header {
+  font-size: rem(16);
+  font-size: rem(16);
+  background-color: #B1E0E6;
+}
+
+.header__menu {
+  margin-left: auto;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top__menu {
+  margin-right: rem(40);
+  margin-right: rem(40);
+}
+
+.drawer {
+  display: none;
+}

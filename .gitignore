@@ -1,0 +1,28 @@
+#.vscode/
+#node_modules/
+#twentytwentyone/
+#package-lock.json/
+#/package-lock.json/
+#/.DS_Store/
+
+
+# どのディレクトリかを問わず、file.phpを除外
+#file-a.php
+
+# .gitignore が置かれたディレクトリ内のfile.phpを除外
+#/file-a.php
+
+
+README.md
+
+gulpfile.js
+
+node_modules
+
+package-lock.json
+
+package.json
+
+
+
+#src
