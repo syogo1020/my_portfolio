@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.p-contact-mail {
+  margin-top: 4.3rem;
+
+  @include mq("md") {
+    margin-top: 3.8rem;
+  }
+
+  dd {
+    margin-top: 0.8rem;
+
+    @include mq("md") {
+      margin-top: 1.5rem;
+    }
+  }
+}

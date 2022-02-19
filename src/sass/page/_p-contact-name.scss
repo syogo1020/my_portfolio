@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.p-contact-name {
+  display: flex;
+  margin-top: 3.9rem;
+  align-items: flex-end;
+  flex-direction: column;
+
+  @include mq("md") {
+    flex-direction: row;
+    margin-top: 6.6rem;
+    justify-content: space-between;
+  }
+}
+.p-contact-name__left {
+  width: 100%;
+  dd {
+    margin-top: 0.7rem;
+
+    @include mq("md") {
+      margin-top: 1.5rem;
+    }
+  }
+
+  @include mq("md") {
+    width: 44.6rem;
+  }
+}
+
+.p-contact-name__right {
+  width: 100%;
+  margin-top: 1.5rem;
+
+  @include mq("md") {
+    width: 46.5rem;
+    margin-top: 0;
+  }
+}

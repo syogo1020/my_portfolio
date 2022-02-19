@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.p-contact-label {
+  font-size: 1.2rem;
+  line-height: 2.58;
+  letter-spacing: 0.18rem;
+  display: inline-block;
+
+  @include mq("md") {
+    font-size: 1.8rem;
+    line-height: 1.72223;
+    letter-spacing: 0.27rem;
+  }
+}
+
+.p-contact-label__name {
+  &::after {
+    margin-left: 0.9rem;
+
+    @include mq("md") {
+      margin-left: 0.4rem;
+    }
+  }
+}
+
+.p-contact-label__mail {
+  &::after {
+    margin-left: 1.7rem;
+
+    @include mq("md") {
+      margin-left: 0.4rem;
+    }
+  }
+}
+
+.p-contact-label__comment {
+  &::after {
+    margin-left: 0.8rem;
+
+    @include mq("md") {
+      margin-left: 5.7rem;
+    }
+  }
+}
+
+.p-contact-label__required {
+  position: relative;
+
+  @include mq("md") {
+    padding-right: 5.4rem;
+  }
+
+  &::after {
+    content: "必須";
+    border: 1px solid;
+    color: $white;
+    color: $black;
+    font-size: 1.2rem;
+    font-weight: $bold;
+    padding: 0.3rem 0.3rem;
+  }
+}

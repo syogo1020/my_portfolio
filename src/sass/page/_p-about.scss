@@ -1,0 +1,93 @@
+@use "global" as *;
+.p-about {
+}
+
+.p-about__body {
+  padding: 2rem;
+  display: flex;
+  background: $white;
+  margin: 2rem auto 0;
+  letter-spacing: 0.1rem;
+  max-width: 100rem;
+  width: 100%;
+  border-radius: 2rem;
+  flex-direction: column;
+  align-items: center;
+  @include mq("md") {
+    padding: 5rem;
+    flex-direction: row;
+  }
+}
+.p-about__img {
+  @include mq("md") {
+    width: 30%;
+  }
+}
+.p-about__texts {
+  @include mq("md") {
+    padding: 0 2rem;
+    width: 70%;
+  }
+}
+.p-about__name {
+  font-size: 2.5rem;
+  font-weight: $bold;
+  span {
+    margin-left: 0.5rem;
+  }
+}
+
+.p-about__text--top {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  @include mq("md") {
+    font-size: 1.4rem;
+  }
+}
+.p-about__text__title {
+  display: inline-block;
+  border-bottom: solid 1px;
+  font-size: 2rem;
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: 3rem;
+  }
+}
+.p-about__text--bottom {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+.p-about__text {
+  margin-top: 2rem;
+}
+.p-about__subname {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  @include mq("md") {
+    font-size: 1.8rem;
+  }
+}
+
+.p-about__subtext {
+  margin-top: 1rem;
+}
+
+.p-about-porfile {
+  @include mq("md") {
+    max-width: 30rem;
+    width: 100%;
+  }
+}
+
+.p-about-porfile__img {
+  width: 50%;
+  margin: 0 auto;
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.p-about-porfile__name {
+  text-align: center;
+  font-size: 2rem;
+}

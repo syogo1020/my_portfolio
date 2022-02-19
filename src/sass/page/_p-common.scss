@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.p-common {
+  text-align: center;
+  font-weight: $bold;
+}
+.p-common__title {
+  font-size: 3.2rem;
+  margin-top: 5rem;
+}
+.p-common__text {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
