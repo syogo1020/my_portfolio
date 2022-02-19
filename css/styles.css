@@ -541,6 +541,7 @@ select::-ms-expand {
 
 .p-about__subname {
   font-size: 1.2rem;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .p-about__subname {
@@ -988,10 +989,6 @@ select::-ms-expand {
             transform: translateX(100px);
   }
 }
-.p-skills__inner {
-  max-width: 100rem;
-}
-
 .p-skills__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1042,7 +1039,7 @@ select::-ms-expand {
 }
 
 .p-skills__text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -1211,7 +1208,7 @@ select::-ms-expand {
 }
 
 .l-contact {
-  max-width: 100rem;
+  padding: 2rem 0;
 }
 
 .l-footer {
@@ -1222,15 +1219,11 @@ select::-ms-expand {
   padding: 7rem 0;
 }
 
-.l-works {
-  max-width: 100rem;
-}
-
 .p-footer {
   background: #3e3e3e;
 }
 
-.footer__copyright {
+.p-footer__copyright {
   font-size: 1.4rem;
   display: block;
   text-align: center;

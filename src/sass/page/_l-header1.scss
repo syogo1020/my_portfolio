@@ -294,6 +294,7 @@
 }
 .p-about__subname {
   font-size: 1.2rem;
+  margin-top: 1rem;
   @include mq("md") {
     font-size: 1.8rem;
   }
@@ -667,9 +668,9 @@
 
 .p-skills {
 }
-.p-skills__inner {
-  max-width: 100rem;
-}
+// .p-skills__inner {
+//   max-width: 100rem;
+// }
 .p-skills__items {
   display: flex;
   justify-content: center;
@@ -704,7 +705,7 @@
   margin-top: 1rem;
 }
 .p-skills__text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -840,9 +841,7 @@
 }
 
 .l-contact {
-  // padding: 2rem 0;
-  
-    max-width: 100rem;
+   padding: 2rem 0;
 }
 .l-footer {
   padding: 4.5rem 0;
@@ -852,18 +851,14 @@
   padding: 7rem 0;
 }
 
-.l-works {
-  max-width: 100rem;
-}
-
-.footer {
+.p-footer {
 }
 
 .p-footer {
   background: $footer-color;
 }
 
-.footer__copyright {
+.p-footer__copyright {
   font-size: 1.4rem;
   display: block;
   text-align: center;
