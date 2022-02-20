@@ -1,11 +1,14 @@
 @use "global" as *;
 
 .p-sp-nav__item {
-  font-size: 1.125rem;
   font-weight: $bold;
   letter-spacing: 0.08em;
   line-height: 1.2;
-  text-align: center;
+  font-size: 1.6rem;
+  padding-left: 10%;
+  @include mq('md') {
+    font-size: 3.2rem;
+  }
 }
 
 .p-sp-nav__item a {
