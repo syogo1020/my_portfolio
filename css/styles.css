@@ -909,7 +909,7 @@ select::-ms-expand {
 }
 
 .p-mainvisual {
-  background-image: url(/images/common/hokkaidou.jpg);
+  background-image: url(../images/common/hokkaidou.jpg);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
